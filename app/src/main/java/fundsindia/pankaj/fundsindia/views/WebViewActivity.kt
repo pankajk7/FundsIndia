@@ -37,6 +37,11 @@ class WebViewActivity : AppCompatActivity() {
                 super.onPageFinished(view, url)
                 pb_webview.visibility = View.GONE
             }
+
+            override fun onPageCommitVisible(view: WebView?, url: String?) {
+                super.onPageCommitVisible(view, url)
+                pb_webview.visibility = View.GONE
+            }
         }
     }
 }
